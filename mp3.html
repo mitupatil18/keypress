@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(https://images.unsplash.com/photo-1529236183275-4fdcf2bc987e?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        }
+
+        div {
+            text-align: center;
+            background-color: blanchedalmond;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, p {
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            width: fit-content;
+            padding: 25px;
+            border-radius: 10px;
+            border: 3px solid black;
+            margin: 10px; /* Add some margin for spacing */
+        }
+
+        h2 span {
+            color: #ff4500; /* Orange color for the span text */
+        }
+
+        p {
+            text-align: center; /* Center the text inside the <p> element */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: max-content; /* Ensure the height takes up the full space within the div */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            Press any keyboard <span>KEY</span>
+        </h2>
+    </div>
+    <p id="ele">
+       null
+    </p>
+    <script>
+        document.addEventListener('keypress', (e) => {
+            document.getElementById("ele").innerText = e.key;
+        });
+    </script>
+</body>
+</html>
